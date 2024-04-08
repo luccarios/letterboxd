@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.favorite-movies .movie img,
+.recent-movies .movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: border-color 0.4s ease;
+    border: 3px solid transparent; 
+    box-sizing: border-box; 
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #a3a3a3;
+    width: 100%; 
+    margin: 4px 0; 
+    transition: none;
+}
+
+.favorite-movies hr, 
+.recent-movies hr, 
+.reviews hr,
+.populars hr {
+    border-top-color: #fff;
+}
+
+.favorite-movies .movie img:hover,
+.recent-movies .movie img:hover,
+:hover {
+    border-color: #2fe22f; 
+    padding: 0;
+}
+
+.favorite-movies .movie img,
+.recent-movies .movie img {
+    width: calc(100% - 4px);
+    height: auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #272e36, #14181c 960px);
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #14181c;
+    color: #fff;
+    padding: 10px;
+}
+
+.logo img {
+    width: 270px; 
+    height: 50px; 
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.raio-icon {
+    width: 17px;
+    height: 17px; 
+    fill: #ffffff; 
+    margin-right: 18px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    flex-direction: column;
+    position: sticky;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-details {
+    margin-left: 20px;
+    color: #a3a3a3;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.profile-bio {
+    font-size: 15px;
+    color: #a3a3a3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pin-icon {
+    width: 17px;
+    height: 17px; 
+    fill: #a3a3a3;
+    margin-right: 3px;
+}
+
+
+.stat {
+    margin-right: 20px;
+}
+
+.favorite-movies {
+    padding: 10px; 
+    max-width: 750px; 
+    margin: 0 auto; 
+    color: #a3a3a3;
+}
+
+.recent-movies {
+    padding: 10px;
+    max-width: 750px; 
+    margin: 0 auto;
+    color: #a3a3a3;
+}
+
+.star {
+    color: #a3a3a3; 
+    font-size: 18px; 
+    margin-top: 15px;
+}
+
+.stareview {
+    color: #2fe22f; 
+    font-size: 20px; 
+}
+
+
+.heart {
+    color: #a3a3a3; 
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie {
+    width: calc(25% - 10px);
+    margin-bottom: 10px; 
+    padding-top: 10px;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.reviews {
+    padding: 10px; 
+    max-width: 750px; 
+    margin: 10px auto; 
+    color: #a3a3a3;
+}
+
+.review {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.review img {
+    border-radius: 13px;
+    max-height: 200px;
+    margin-bottom: 10px; 
+    padding: 10px;
+}
+
+.review-info {
+    padding: 15px;
+}
+
+.review-info .title-year {
+    display: flex;
+    align-items: center;
+}
+
+.review-info h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    margin-bottom: 14px;
+    color: #fff; 
+    white-space: nowrap;
+}
+
+.rating {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.rating p {
+    font-size: 14px;
+}
+
+.review-info p1 {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+.review-info p {
+    white-space: nowrap;
+}
+
+
+.tooltip {
+    position: absolute;
+    bottom: calc(100% + 5px); 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#686d71;
+    color: #fff;
+    padding: 4px 9px;
+    border-radius: 5px;
+    white-space: nowrap;
+    visibility: hidden;
+    z-index: 1;
+    font-size: 13px;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: #686d71 transparent transparent transparent;
+}
+
+.movie {
+    position: relative;
+}
+
+.movie:hover .tooltip {
+    visibility: visible;
+}
+
+.populars {
+    padding: 10px; 
+    max-width: 750px; 
+    margin: 10px auto; 
+    color: #a3a3a3;
+}
+
+.popular {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.popular img {
+    border-radius: 13px;
+    max-height: 200px;
+    margin-bottom: 10px; 
+    padding: 10px;
+}
+
+.popular-info {
+    padding: 15px;
+}
+
+.popular-info h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    margin-bottom: 13px;
+    color: #fff; 
+    white-space: nowrap;
+}
+
+.popular-info .title-year {
+    display: flex;
+    align-items: center;
+}
+
+.popular-info p1 {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    white-space: nowrap;
+}
+
+.popular-info p {
+    max-width: 700px;
+    white-space: nowrap;
+}
+
+.footer {
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    margin-top: 40px;
+}
